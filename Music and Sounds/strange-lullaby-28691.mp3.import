@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/strange-lullaby-28691.mp3-f65a69b6c7ef33099623f985a1fee743.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/strange-lullaby-28691.mp3"
+dest_files=[ "res://.import/strange-lullaby-28691.mp3-f65a69b6c7ef33099623f985a1fee743.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

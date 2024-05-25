@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bug-zapper-47300.mp3-a27a3263933c3bd4abbdc47cf7ccc90e.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/bug-zapper-47300.mp3"
+dest_files=[ "res://.import/bug-zapper-47300.mp3-a27a3263933c3bd4abbdc47cf7ccc90e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

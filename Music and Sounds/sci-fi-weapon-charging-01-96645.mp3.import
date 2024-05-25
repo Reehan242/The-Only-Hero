@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sci-fi-weapon-charging-01-96645.mp3-595209b24fe2b1fe5a36a5fcd7ddda5c.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/sci-fi-weapon-charging-01-96645.mp3"
+dest_files=[ "res://.import/sci-fi-weapon-charging-01-96645.mp3-595209b24fe2b1fe5a36a5fcd7ddda5c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

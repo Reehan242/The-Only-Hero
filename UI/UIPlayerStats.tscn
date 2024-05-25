@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/UI_Stats.gd" type="Script" id=1]
+[ext_resource path="res://UI/experience.png" type="Texture" id=2]
+[ext_resource path="res://UI/experienceBar.png" type="Texture" id=3]
+
+[node name="Stats" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Exp Bar" type="Sprite" parent="."]
+position = Vector2( 0, 11 )
+scale = Vector2( 0.4, 0.2 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="spr_Exp" type="Sprite" parent="Exp Bar"]
+modulate = Color( 0.137255, 0.133333, 0.827451, 1 )
+show_behind_parent = true
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 79.0
+margin_bottom = 40.0
+color = Color( 0.129412, 0.152941, 0.137255, 0.705882 )
+
+[node name="LVL" type="Label" parent="."]
+margin_right = 46.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Level 1"
+
+[node name="EXP" type="Label" parent="."]
+modulate = Color( 0, 1, 0.133333, 1 )
+margin_left = 3.0
+margin_top = 12.0
+margin_right = 151.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Def" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 26.0
+margin_right = 98.0
+margin_bottom = 46.0
+grow_horizontal = 0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/font_color = Color( 0.00392157, 0, 1, 1 )
+text = "Def = "
+valign = 1
+
+[node name="Atk" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 26.0
+margin_right = 61.0
+margin_bottom = 46.0
+grow_horizontal = 0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/font_color = Color( 1, 0, 0.0941176, 1 )
+text = "Atk ="
+valign = 1

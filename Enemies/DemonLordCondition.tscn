@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemies/DemonLordCondition.gd" type="Script" id=1]
+[ext_resource path="res://Music and Sounds/bug-zapper-47300.mp3" type="AudioStream" id=2]
+
+[node name="DemonLordCondition" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

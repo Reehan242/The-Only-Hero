@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/victory-electronic-video-game-soundtrack-denouement-credits-153944.mp3-4467aca56abed1224e2640201d882148.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/victory-electronic-video-game-soundtrack-denouement-credits-153944.mp3"
+dest_files=[ "res://.import/victory-electronic-video-game-soundtrack-denouement-credits-153944.mp3-4467aca56abed1224e2640201d882148.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

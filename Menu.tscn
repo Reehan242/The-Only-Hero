@@ -1,0 +1,218 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://Player/player_strip60.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Bat.png" type="Texture" id=3]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/Slime_strip4.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/DemonLordBG.png" type="Texture" id=6]
+[ext_resource path="res://UI/title_strip4.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/DemonLordMenu_strip7.png" type="Texture" id=8]
+[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/Panduan.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music and Sounds/8-bit-dream-land-142093.mp3" type="AudioStream" id=11]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 8 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 8 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 8 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 14 ), SubResource( 15 ), SubResource( 15 ), SubResource( 14 ), SubResource( 16 ), SubResource( 16 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 0, 96, 64 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Image" type="Control" parent="."]
+
+[node name="BG" type="Sprite" parent="Image"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 0.698039, 0.054902, 0.054902, 1 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
+
+[node name="DemonLord" type="Sprite" parent="Image"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.584314 )
+position = Vector2( 208, 88 )
+scale = Vector2( 8, 8.47604 )
+texture = ExtResource( 6 )
+
+[node name="DemonLord2" type="AnimatedSprite" parent="Image"]
+position = Vector2( 224, 88 )
+scale = Vector2( 6.625, 7.375 )
+frames = SubResource( 17 )
+frame = 3
+playing = true
+
+[node name="BG2" type="Sprite" parent="Image"]
+position = Vector2( 0, 112 )
+scale = Vector2( 1, 0.9 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 80 )
+
+[node name="Bat4" type="Sprite" parent="Image"]
+position = Vector2( 192, 152 )
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 3 )
+hframes = 5
+
+[node name="Bat3" type="Sprite" parent="Image"]
+position = Vector2( 176, 168 )
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 3 )
+hframes = 5
+frame = 2
+
+[node name="Bat1" type="Sprite" parent="Image"]
+position = Vector2( 168, 112 )
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 3 )
+hframes = 5
+frame = 1
+
+[node name="Bat2" type="Sprite" parent="Image"]
+position = Vector2( 192, 112 )
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 3 )
+hframes = 5
+frame = 3
+
+[node name="Slime2" type="Sprite" parent="Image"]
+position = Vector2( 240, 120 )
+rotation = -3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 5 )
+hframes = 4
+
+[node name="Slime1" type="Sprite" parent="Image"]
+position = Vector2( 216, 128 )
+rotation = 3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 5 )
+hframes = 4
+frame = 2
+
+[node name="Slime3" type="Sprite" parent="Image"]
+position = Vector2( 241, 145 )
+rotation = 3.14159
+scale = Vector2( 2, -2 )
+texture = ExtResource( 5 )
+hframes = 4
+frame = 1
+
+[node name="Title" type="AnimatedSprite" parent="Image"]
+position = Vector2( 80, 48 )
+scale = Vector2( 1.65625, 1.5625 )
+frames = SubResource( 7 )
+playing = true
+
+[node name="Bush" parent="Image" instance=ExtResource( 9 )]
+position = Vector2( 296, 144 )
+
+[node name="Bush2" parent="Image" instance=ExtResource( 9 )]
+position = Vector2( 16, 120 )
+
+[node name="Hero" type="Sprite" parent="Image"]
+position = Vector2( 56, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 60
+frame = 26
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.05
+anchor_top = 0.6
+anchor_right = 0.2
+anchor_bottom = 0.623
+margin_left = 8.0
+margin_top = -8.00001
+margin_right = 42.0
+margin_bottom = 79.86
+rect_scale = Vector2( 0.8, 0.8 )
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+margin_right = 89.0
+margin_bottom = 20.0
+text = "Mulai Game"
+
+[node name="Continue_Game" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 89.0
+margin_bottom = 44.0
+text = "Lanjutkan"
+
+[node name="Help" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 89.0
+margin_bottom = 68.0
+text = "Bantuan"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 72.0
+margin_right = 89.0
+margin_bottom = 92.0
+text = "Keluar"
+
+[node name="Panduan" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="Label" type="Label" parent="."]
+margin_left = 280.0
+margin_top = 171.0
+margin_right = 347.0
+margin_bottom = 185.0
+rect_scale = Vector2( 0.6, 0.6 )
+text = "By Reehan"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue_Game" to="." method="_on_Continue_Game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Help" to="." method="_on_Help_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
